@@ -73,7 +73,7 @@ def createCopyTask(buildType) {
     def assembleDxCommand = tasks.create("assembleDxCommand", Exec) {
         group = 'other'
         description = "${name}到dx执行中..."
-        workingDir workingDirPath
+//        workingDir workingDirPath
         if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
             it.commandLine 'cmd', '/c', "d8 --output ${outputDexFile.name} ${outputFile.name}"
         } else {
